@@ -1,0 +1,6 @@
+${gender};${firstname};${lastname};${email};${password};${confirmpassword};${firstname_error};${lastname_error};${email_error};${password_error};${confirmpassword_error};
+M;;ali;migzz4@test.com;123456;123456;First name is required.;;;;;
+M;adam;;migzz4@test.com;123456;123456;;Last name is required.;;;;
+M;maged;ali;migzztest.com;123456;123456;;;Wrong email;;;
+M;maged;ali;migzz4@test.com;12345;12345;;;;The password should have at least 6 characters.;;
+M;maged;ali;migzz4@test.com;123456;1234567;;;;;The password and confirmation password do not match.;

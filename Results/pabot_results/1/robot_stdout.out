@@ -1,0 +1,21 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Invalid Login test                                                     
+==============================================================================
+Login with csv                                                        Login was unsuccessful. Please correct the errors and try again.
+| PASS |
+------------------------------------------------------------------------------
+Login with csv                                                        Login was unsuccessful. Please correct the errors and try again.
+| PASS |
+------------------------------------------------------------------------------
+Login with csv                                                        Login was unsuccessful. Please correct the errors and try again.
+| PASS |
+------------------------------------------------------------------------------
+Suites.Invalid Login test                                             | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Migzz\PycharmProjects\Automation_Task1\Results\pabot_results\1\output.xml

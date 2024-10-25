@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-19T22:43:32.116326" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Invalid Register test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\Invalid_Register_test.robot">
+<kw name="Open my browser" owner="Register_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:43:33.056788" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T22:43:33.055788" elapsed="32.439010"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.494798" elapsed="0.216875"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-19T22:43:33.052790" elapsed="32.659884"/>
+</kw>
+<test id="s1-s1-t1" name="Register with Csv" line="15">
+<kw name="Invalid Register">
+<kw name="Open register page from header" owner="Register_resources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:05.725664" level="INFO">Clicking link 'link:Register'.</msg>
+<arg>${reg_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.724666" elapsed="1.721214"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:05.723667" elapsed="1.722213"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:07.454885" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:07.450873" elapsed="0.110952"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:07.446879" elapsed="0.114946"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:07.564823" level="INFO">Typing text '' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:07.563825" elapsed="0.131906"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:07.562809" elapsed="0.133922"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:07.701731" level="INFO">Typing text 'ali' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:07.700728" elapsed="0.108940"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:07.697729" elapsed="0.111939"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:07.810666" level="INFO">Typing text 'migzz4@test.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:07.810666" elapsed="0.136921"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:07.809668" elapsed="0.138918"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:07.952587" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:07.951584" elapsed="0.110937"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:07.949587" elapsed="0.112934"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.064519" level="INFO">Typing text '123456' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.064519" elapsed="0.134924"/>
+</kw>
+<arg>${confirmpassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:08.063520" elapsed="0.136922"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.204445" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.203441" elapsed="0.159907"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:08.201442" elapsed="0.162907"/>
+</kw>
+<kw name="Get firstname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.421316" level="INFO">${error} = First name is required.</msg>
+<var>${error}</var>
+<arg>${error_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.366347" elapsed="0.054969"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:08.422315" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:08.423314" level="INFO">${actual_firstname_error} = First name is required.</msg>
+<var>${actual_firstname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:08.364349" elapsed="0.058965"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.423314" elapsed="0.001000"/>
+</kw>
+<kw name="Get lastname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.476285" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.426312" elapsed="0.050972"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:08.477284" elapsed="0.001005"/>
+</return>
+<msg time="2024-10-19T22:44:08.478289" level="INFO">${actual_lastname_error} = </msg>
+<var>${actual_lastname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:08.425313" elapsed="0.053969"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.479282" elapsed="0.151317"/>
+</kw>
+<kw name="Get email error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.691565" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_email}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.637603" elapsed="0.053962"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:08.691565" elapsed="0.000998"/>
+</return>
+<msg time="2024-10-19T22:44:08.692563" level="INFO">${actual_email_error} = </msg>
+<var>${actual_email_error}</var>
+<status status="PASS" start="2024-10-19T22:44:08.632599" elapsed="0.059964"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.693563" elapsed="0.001000"/>
+</kw>
+<kw name="Get password error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.733542" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_password_must_6}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.696561" elapsed="0.036981"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:08.734540" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:08.735540" level="INFO">${actual_password_error} = </msg>
+<var>${actual_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:08.695563" elapsed="0.039977"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.735540" elapsed="0.000999"/>
+</kw>
+<kw name="Get confirmPasswoed error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:08.776516" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_confirmpass_notMatch}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.738537" elapsed="0.037979"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:08.776516" elapsed="0.000999"/>
+</return>
+<msg time="2024-10-19T22:44:08.777515" level="INFO">${actual_confirm_password_error} = </msg>
+<var>${actual_confirm_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:08.737538" elapsed="0.039977"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.778515" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<arg>${firstname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.779514" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<arg>${lastname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.780513" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<arg>${email_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.782512" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<arg>${password_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.783512" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<arg>${confirmpassword_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:08.784511" elapsed="0.000999"/>
+</kw>
+<arg>gender=M</arg>
+<arg>firstname=</arg>
+<arg>lastname=ali</arg>
+<arg>email=migzz4@test.com</arg>
+<arg>password=123456</arg>
+<arg>confirmpassword=123456</arg>
+<arg>firstname_error=First name is required.</arg>
+<arg>lastname_error=</arg>
+<arg>email_error=</arg>
+<arg>password_error=</arg>
+<arg>confirmpassword_error=</arg>
+<status status="PASS" start="2024-10-19T22:44:05.720670" elapsed="3.064840"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:05.712674" elapsed="3.073835"/>
+</test>
+<test id="s1-s1-t2" name="Register with Csv" line="15">
+<kw name="Invalid Register">
+<kw name="Open register page from header" owner="Register_resources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:09.216425" level="INFO">Clicking link 'link:Register'.</msg>
+<arg>${reg_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:09.216425" elapsed="0.941605"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:09.214427" elapsed="0.943603"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.161028" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.160028" elapsed="0.095919"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.159029" elapsed="0.096918"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.257947" level="INFO">Typing text 'adam' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.256948" elapsed="0.111935"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.256948" elapsed="0.111935"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.371881" level="INFO">Typing text '' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.370883" elapsed="0.166903"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.368883" elapsed="0.168903"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.540783" level="INFO">Typing text 'migzz4@test.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.539784" elapsed="0.211881"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.538784" elapsed="0.212881"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.753662" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.753662" elapsed="0.116933"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.752662" elapsed="0.118934"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.872595" level="INFO">Typing text '123456' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.872595" elapsed="0.170903"/>
+</kw>
+<arg>${confirmpassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:10.871596" elapsed="0.171902"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.046494" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.045495" elapsed="0.123929"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:11.044497" elapsed="0.124927"/>
+</kw>
+<kw name="Get firstname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.203405" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.171423" elapsed="0.031982"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:11.203405" elapsed="0.001000"/>
+</return>
+<msg time="2024-10-19T22:44:11.205403" level="INFO">${actual_firstname_error} = </msg>
+<var>${actual_firstname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:11.170423" elapsed="0.034980"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.206403" elapsed="0.000999"/>
+</kw>
+<kw name="Get lastname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.242382" level="INFO">${error} = Last name is required.</msg>
+<var>${error}</var>
+<arg>${error_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.209403" elapsed="0.032979"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:11.243383" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:11.243383" level="INFO">${actual_lastname_error} = Last name is required.</msg>
+<var>${actual_lastname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:11.207402" elapsed="0.035981"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.244382" elapsed="0.000000"/>
+</kw>
+<kw name="Get email error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.268367" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_email}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.245381" elapsed="0.023986"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:11.269367" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:11.270365" level="INFO">${actual_email_error} = </msg>
+<var>${actual_email_error}</var>
+<status status="PASS" start="2024-10-19T22:44:11.244382" elapsed="0.025983"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.270365" elapsed="0.001000"/>
+</kw>
+<kw name="Get password error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.295351" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_password_must_6}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.272364" elapsed="0.022987"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:11.295351" elapsed="0.001000"/>
+</return>
+<msg time="2024-10-19T22:44:11.296351" level="INFO">${actual_password_error} = </msg>
+<var>${actual_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:11.272364" elapsed="0.023987"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.296351" elapsed="0.000999"/>
+</kw>
+<kw name="Get confirmPasswoed error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.325337" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_confirmpass_notMatch}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.298349" elapsed="0.026988"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:11.326335" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:11.327334" level="INFO">${actual_confirm_password_error} = </msg>
+<var>${actual_confirm_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:11.297350" elapsed="0.029984"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.327334" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<arg>${firstname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.329333" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<arg>${lastname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.330332" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<arg>${email_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.331332" elapsed="0.001999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<arg>${password_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.334332" elapsed="0.000998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<arg>${confirmpassword_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.335330" elapsed="0.000998"/>
+</kw>
+<arg>gender=M</arg>
+<arg>firstname=adam</arg>
+<arg>lastname=</arg>
+<arg>email=migzz4@test.com</arg>
+<arg>password=123456</arg>
+<arg>confirmpassword=123456</arg>
+<arg>firstname_error=</arg>
+<arg>lastname_error=Last name is required.</arg>
+<arg>email_error=</arg>
+<arg>password_error=</arg>
+<arg>confirmpassword_error=</arg>
+<status status="PASS" start="2024-10-19T22:44:09.211430" elapsed="2.124898"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:09.193440" elapsed="2.142888"/>
+</test>
+<test id="s1-s1-t3" name="Register with Csv" line="15">
+<kw name="Invalid Register">
+<kw name="Open register page from header" owner="Register_resources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.341325" level="INFO">Clicking link 'link:Register'.</msg>
+<arg>${reg_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.340325" elapsed="0.515731"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:11.340325" elapsed="0.515731"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.858054" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.857054" elapsed="0.066962"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:11.856056" elapsed="0.068961"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.926016" level="INFO">Typing text 'maged' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.926016" elapsed="0.115933"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:11.925017" elapsed="0.117932"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.110958" level="INFO">Typing text 'ali' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.043949" elapsed="0.205930"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:12.042949" elapsed="0.207935"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.254875" level="INFO">Typing text 'migzztest.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.253877" elapsed="0.149914"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:12.251878" elapsed="0.151913"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.405794" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.404794" elapsed="0.135918"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:12.403791" elapsed="0.136921"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.542710" level="INFO">Typing text '123456' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.541712" elapsed="0.121929"/>
+</kw>
+<arg>${confirmpassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:12.540712" elapsed="0.123929"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.666640" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.665640" elapsed="0.063965"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:12.664641" elapsed="0.065963"/>
+</kw>
+<kw name="Get firstname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.775577" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.733601" elapsed="0.041976"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:12.775577" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:12.776577" level="INFO">${actual_firstname_error} = </msg>
+<var>${actual_firstname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:12.730604" elapsed="0.045973"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.776577" elapsed="0.000999"/>
+</kw>
+<kw name="Get lastname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.797565" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.778575" elapsed="0.018990"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:12.798564" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:12.798564" level="INFO">${actual_lastname_error} = </msg>
+<var>${actual_lastname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:12.777576" elapsed="0.021988"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.799564" elapsed="0.001000"/>
+</kw>
+<kw name="Get email error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.822550" level="INFO">${error} = Wrong email</msg>
+<var>${error}</var>
+<arg>${error_email}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.802562" elapsed="0.019988"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:12.822550" elapsed="0.000999"/>
+</return>
+<msg time="2024-10-19T22:44:12.823549" level="INFO">${actual_email_error} = Wrong email</msg>
+<var>${actual_email_error}</var>
+<status status="PASS" start="2024-10-19T22:44:12.801562" elapsed="0.021987"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.823549" elapsed="0.001000"/>
+</kw>
+<kw name="Get password error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.843539" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_password_must_6}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.825548" elapsed="0.017991"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:12.843539" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:12.844537" level="INFO">${actual_password_error} = </msg>
+<var>${actual_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:12.824549" elapsed="0.019988"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.844537" elapsed="0.001000"/>
+</kw>
+<kw name="Get confirmPasswoed error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.863527" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_confirmpass_notMatch}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.845537" elapsed="0.017990"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:12.863527" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:12.864526" level="INFO">${actual_confirm_password_error} = </msg>
+<var>${actual_confirm_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:12.845537" elapsed="0.018989"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.864526" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<arg>${firstname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.865525" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<arg>${lastname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.866525" elapsed="0.002001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<arg>${email_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.868526" elapsed="0.000997"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<arg>${password_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.869523" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<arg>${confirmpassword_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.870522" elapsed="0.000000"/>
+</kw>
+<arg>gender=M</arg>
+<arg>firstname=maged</arg>
+<arg>lastname=ali</arg>
+<arg>email=migzztest.com</arg>
+<arg>password=123456</arg>
+<arg>confirmpassword=123456</arg>
+<arg>firstname_error=</arg>
+<arg>lastname_error=</arg>
+<arg>email_error=Wrong email</arg>
+<arg>password_error=</arg>
+<arg>confirmpassword_error=</arg>
+<status status="PASS" start="2024-10-19T22:44:11.339326" elapsed="1.531196"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:11.337327" elapsed="1.534195"/>
+</test>
+<test id="s1-s1-t4" name="Register with Csv" line="15">
+<kw name="Invalid Register">
+<kw name="Open register page from header" owner="Register_resources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.876520" level="INFO">Clicking link 'link:Register'.</msg>
+<arg>${reg_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.876520" elapsed="0.503014"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:12.875520" elapsed="0.504014"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.381534" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.380535" elapsed="0.072955"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:13.380535" elapsed="0.072955"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.456489" level="INFO">Typing text 'maged' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.455489" elapsed="0.118933"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:13.454489" elapsed="0.119933"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.577419" level="INFO">Typing text 'ali' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.576421" elapsed="0.105939"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:13.575420" elapsed="0.108939"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.688358" level="INFO">Typing text 'migzz4@test.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.686356" elapsed="0.289835"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:13.685357" elapsed="0.291833"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.980188" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.979189" elapsed="0.152914"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:13.977190" elapsed="0.155911"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.138098" level="INFO">Typing text '12345' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.136100" elapsed="0.145916"/>
+</kw>
+<arg>${confirmpassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:14.133101" elapsed="0.149914"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.285014" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.284014" elapsed="0.081953"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:14.283015" elapsed="0.083953"/>
+</kw>
+<kw name="Get firstname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.388954" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.368966" elapsed="0.019988"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:14.388954" elapsed="0.000999"/>
+</return>
+<msg time="2024-10-19T22:44:14.389953" level="INFO">${actual_firstname_error} = </msg>
+<var>${actual_firstname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:14.367966" elapsed="0.021987"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.389953" elapsed="0.001000"/>
+</kw>
+<kw name="Get lastname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.410942" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.391952" elapsed="0.018990"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:14.410942" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:14.411941" level="INFO">${actual_lastname_error} = </msg>
+<var>${actual_lastname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:14.390953" elapsed="0.020988"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.411941" elapsed="0.000999"/>
+</kw>
+<kw name="Get email error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.441924" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_email}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.412940" elapsed="0.029983"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:14.442923" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:14.443923" level="INFO">${actual_email_error} = </msg>
+<var>${actual_email_error}</var>
+<status status="PASS" start="2024-10-19T22:44:14.412940" elapsed="0.030983"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.443923" elapsed="0.000999"/>
+</kw>
+<kw name="Get password error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.483901" level="INFO">${error} = The password should have at least 6 characters.</msg>
+<var>${error}</var>
+<arg>${error_password_must_6}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.446922" elapsed="0.036979"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:14.483901" elapsed="0.000999"/>
+</return>
+<msg time="2024-10-19T22:44:14.484900" level="INFO">${actual_password_error} = The password should have at least 6 characters.</msg>
+<var>${actual_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:14.444922" elapsed="0.040978"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.485900" elapsed="0.000998"/>
+</kw>
+<kw name="Get confirmPasswoed error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.512885" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_confirmpass_notMatch}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.487897" elapsed="0.024988"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:14.512885" elapsed="0.001000"/>
+</return>
+<msg time="2024-10-19T22:44:14.513885" level="INFO">${actual_confirm_password_error} = </msg>
+<var>${actual_confirm_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:14.486898" elapsed="0.026987"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.514882" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<arg>${firstname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.515883" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<arg>${lastname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.517881" elapsed="0.001001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<arg>${email_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.519881" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<arg>${password_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.520880" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<arg>${confirmpassword_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.521879" elapsed="0.000999"/>
+</kw>
+<arg>gender=M</arg>
+<arg>firstname=maged</arg>
+<arg>lastname=ali</arg>
+<arg>email=migzz4@test.com</arg>
+<arg>password=12345</arg>
+<arg>confirmpassword=12345</arg>
+<arg>firstname_error=</arg>
+<arg>lastname_error=</arg>
+<arg>email_error=</arg>
+<arg>password_error=The password should have at least 6 characters.</arg>
+<arg>confirmpassword_error=</arg>
+<status status="PASS" start="2024-10-19T22:44:12.874520" elapsed="1.648358"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:12.871522" elapsed="1.651356"/>
+</test>
+<test id="s1-s1-t5" name="Register with Csv" line="15">
+<kw name="Invalid Register">
+<kw name="Open register page from header" owner="Register_resources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:14.529875" level="INFO">Clicking link 'link:Register'.</msg>
+<arg>${reg_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:14.528876" elapsed="0.475579"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:14.528876" elapsed="0.476578"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.006457" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.006457" elapsed="0.066958"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.005454" elapsed="0.067961"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.075414" level="INFO">Typing text 'maged' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.074415" elapsed="0.138922"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.074415" elapsed="0.139921"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.220332" level="INFO">Typing text 'ali' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.218332" elapsed="0.147916"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.215335" elapsed="0.150913"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.370246" level="INFO">Typing text 'migzz4@test.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.369246" elapsed="0.192889"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.367249" elapsed="0.194886"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.565135" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.564134" elapsed="0.150914"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.563135" elapsed="0.151913"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.719046" level="INFO">Typing text '1234567' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.718047" elapsed="0.168902"/>
+</kw>
+<arg>${confirmpassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.716048" elapsed="0.171901"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.890948" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.889948" elapsed="0.102941"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:15.888948" elapsed="0.103941"/>
+</kw>
+<kw name="Get firstname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.031866" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.994889" elapsed="0.036977"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:16.032866" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:16.033867" level="INFO">${actual_firstname_error} = </msg>
+<var>${actual_firstname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:15.993888" elapsed="0.039979"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.034865" elapsed="0.001001"/>
+</kw>
+<kw name="Get lastname error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.065847" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.037863" elapsed="0.027984"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:16.065847" elapsed="0.001000"/>
+</return>
+<msg time="2024-10-19T22:44:16.067848" level="INFO">${actual_lastname_error} = </msg>
+<var>${actual_lastname_error}</var>
+<status status="PASS" start="2024-10-19T22:44:16.036864" elapsed="0.030984"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.068846" elapsed="0.000998"/>
+</kw>
+<kw name="Get email error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.100827" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_email}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.071843" elapsed="0.028984"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:16.100827" elapsed="0.001000"/>
+</return>
+<msg time="2024-10-19T22:44:16.102826" level="INFO">${actual_email_error} = </msg>
+<var>${actual_email_error}</var>
+<status status="PASS" start="2024-10-19T22:44:16.069844" elapsed="0.032982"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.102826" elapsed="0.000999"/>
+</kw>
+<kw name="Get password error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.136807" level="INFO">${error} = </msg>
+<var>${error}</var>
+<arg>${error_password_must_6}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.105824" elapsed="0.030983"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:16.136807" elapsed="0.000999"/>
+</return>
+<msg time="2024-10-19T22:44:16.137806" level="INFO">${actual_password_error} = </msg>
+<var>${actual_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:16.104825" elapsed="0.033981"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.138806" elapsed="0.000999"/>
+</kw>
+<kw name="Get confirmPasswoed error msg" owner="Register_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.201769" level="INFO">${error} = The password and confirmation password do not match.</msg>
+<var>${error}</var>
+<arg>${error_confirmpass_notMatch}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.142804" elapsed="0.058965"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:16.201769" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:16.202771" level="INFO">${actual_confirm_password_error} = The password and confirmation password do not match.</msg>
+<var>${actual_confirm_password_error}</var>
+<status status="PASS" start="2024-10-19T22:44:16.140804" elapsed="0.061967"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.203768" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_firstname_error}</arg>
+<arg>${firstname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.204767" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_lastname_error}</arg>
+<arg>${lastname_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.205767" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_email_error}</arg>
+<arg>${email_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.206766" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_password_error}</arg>
+<arg>${password_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.208765" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_confirm_password_error}</arg>
+<arg>${confirmpassword_error}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.209764" elapsed="0.001000"/>
+</kw>
+<arg>gender=M</arg>
+<arg>firstname=maged</arg>
+<arg>lastname=ali</arg>
+<arg>email=migzz4@test.com</arg>
+<arg>password=123456</arg>
+<arg>confirmpassword=1234567</arg>
+<arg>firstname_error=</arg>
+<arg>lastname_error=</arg>
+<arg>email_error=</arg>
+<arg>password_error=</arg>
+<arg>confirmpassword_error=The password and confirmation password do not match.</arg>
+<status status="PASS" start="2024-10-19T22:44:14.527876" elapsed="1.683889"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:14.524879" elapsed="1.686886"/>
+</test>
+<kw name="Close my browser" owner="Register_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.213763" elapsed="10.718679"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:16.212763" elapsed="10.720704"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:43:32.219267" elapsed="54.714200"/>
+</suite>
+<status status="PASS" start="2024-10-19T22:43:32.164298" elapsed="54.773168"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="Invalid Register test">Suites.Invalid Register test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-19T22:43:32.976834" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 66: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:32.976834" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:32.977833" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 74: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:32.977833" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 78: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.002819" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.003819" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 87: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:44:09.192439" level="WARN">Multiple tests with name 'Register with Csv' executed in suite 'Suites.Invalid Register test'.</msg>
+<msg time="2024-10-19T22:44:11.337327" level="WARN">Multiple tests with name 'Register with Csv' executed in suite 'Suites.Invalid Register test'.</msg>
+<msg time="2024-10-19T22:44:12.871522" level="WARN">Multiple tests with name 'Register with Csv' executed in suite 'Suites.Invalid Register test'.</msg>
+<msg time="2024-10-19T22:44:14.523878" level="WARN">Multiple tests with name 'Register with Csv' executed in suite 'Suites.Invalid Register test'.</msg>
+</errors>
+</robot>

@@ -1,0 +1,47 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Invalid Register test                                                  
+==============================================================================
+Register with Csv                                                     First name is required.
+
+
+
+
+| PASS |
+------------------------------------------------------------------------------
+Register with Csv                                                     
+Last name is required.
+
+
+
+| PASS |
+------------------------------------------------------------------------------
+Register with Csv                                                     
+
+Wrong email
+
+
+| PASS |
+------------------------------------------------------------------------------
+Register with Csv                                                     
+
+
+The password should have at least 6 characters.
+
+| PASS |
+------------------------------------------------------------------------------
+Register with Csv                                                     
+
+
+
+The password and confirmation password do not match.
+| PASS |
+------------------------------------------------------------------------------
+Suites.Invalid Register test                                          | PASS |
+5 tests, 5 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+5 tests, 5 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Migzz\PycharmProjects\Automation_Task1\Results\pabot_results\2\output.xml

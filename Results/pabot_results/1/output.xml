@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-19T22:43:31.973408" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Invalid Login test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\Invalid_Login_test.robot">
+<kw name="Open my browser" owner="Login_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:43:32.974834" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T22:43:32.973835" elapsed="27.638599"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T22:44:00.613431" elapsed="0.065963"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-19T22:43:32.971836" elapsed="27.707558"/>
+</kw>
+<test id="s1-s1-t1" name="Login with csv" line="16">
+<kw name="Invalid Login">
+<kw name="Enter email" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:00.693386" level="INFO">Typing text '' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:00.692389" elapsed="0.120927"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:00.691387" elapsed="0.122930"/>
+</kw>
+<kw name="Enter password" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:00.819317" level="INFO">Typing text '' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:00.817320" elapsed="0.110932"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:00.815317" elapsed="0.112935"/>
+</kw>
+<kw name="Click login btn" owner="Login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:00.929251" level="INFO">Clicking element 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:00.929251" elapsed="0.483679"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:00.928252" elapsed="0.485677"/>
+</kw>
+<kw name="Get invalid login msg" owner="Login_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:01.928567" level="INFO">${error} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${error}</var>
+<arg>${error_invalid_login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:01.416928" elapsed="0.512637"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:01.929565" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:01.930565" level="INFO">${actual_error_msg} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${actual_error_msg}</var>
+<status status="PASS" start="2024-10-19T22:44:01.413929" elapsed="0.516636"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:01.930565" elapsed="0.390462"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<arg>${error_msg}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:02.322026" elapsed="0.002000"/>
+</kw>
+<arg>email=</arg>
+<arg>password=</arg>
+<arg>error_msg=Login was unsuccessful. Please correct the errors and try again.</arg>
+<status status="PASS" start="2024-10-19T22:44:00.689388" elapsed="1.634638"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:00.679394" elapsed="1.645631"/>
+</test>
+<test id="s1-s1-t2" name="Login with csv" line="16">
+<kw name="Invalid Login">
+<kw name="Enter email" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:02.345014" level="INFO">Typing text 'migzz10@test.com' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:02.344015" elapsed="0.139918"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:02.343015" elapsed="0.141919"/>
+</kw>
+<kw name="Enter password" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:02.488931" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:02.486933" elapsed="0.158907"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:02.485933" elapsed="0.160906"/>
+</kw>
+<kw name="Click login btn" owner="Login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:02.649839" level="INFO">Clicking element 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:02.647839" elapsed="0.361628"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:02.646839" elapsed="0.363628"/>
+</kw>
+<kw name="Get invalid login msg" owner="Login_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.547854" level="INFO">${error} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${error}</var>
+<arg>${error_invalid_login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.012467" elapsed="0.535387"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:03.549853" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:03.551853" level="INFO">${actual_error_msg} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${actual_error_msg}</var>
+<status status="PASS" start="2024-10-19T22:44:03.010467" elapsed="0.541386"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.552851" elapsed="0.001001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<arg>${error_msg}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.553852" elapsed="0.000998"/>
+</kw>
+<arg>email=migzz10@test.com</arg>
+<arg>password=123456</arg>
+<arg>error_msg=Login was unsuccessful. Please correct the errors and try again.</arg>
+<status status="PASS" start="2024-10-19T22:44:02.341017" elapsed="1.213833"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:02.330022" elapsed="1.225827"/>
+</test>
+<test id="s1-s1-t3" name="Login with csv" line="16">
+<kw name="Invalid Login">
+<kw name="Enter email" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.561846" level="INFO">Typing text 'migzz12@test.com' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.560850" elapsed="0.160907"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:03.559848" elapsed="0.161909"/>
+</kw>
+<kw name="Enter password" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.723753" level="INFO">Typing text '123456789' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.722755" elapsed="0.203882"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:03.721757" elapsed="0.205882"/>
+</kw>
+<kw name="Click login btn" owner="Login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.929636" level="INFO">Clicking element 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.928636" elapsed="1.195483"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:03.927639" elapsed="1.196480"/>
+</kw>
+<kw name="Get invalid login msg" owner="Login_resources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:05.162096" level="INFO">${error} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${error}</var>
+<arg>${error_invalid_login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.126118" elapsed="0.035978"/>
+</kw>
+<return>
+<value>${error}</value>
+<status status="PASS" start="2024-10-19T22:44:05.163094" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-19T22:44:05.163094" level="INFO">${actual_error_msg} = Login was unsuccessful. Please correct the errors and try again.</msg>
+<var>${actual_error_msg}</var>
+<status status="PASS" start="2024-10-19T22:44:05.125118" elapsed="0.037976"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.164095" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_error_msg}</arg>
+<arg>${error_msg}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.167098" elapsed="0.002994"/>
+</kw>
+<arg>email=migzz12@test.com</arg>
+<arg>password=123456789</arg>
+<arg>error_msg=Login was unsuccessful. Please correct the errors and try again.</arg>
+<status status="PASS" start="2024-10-19T22:44:03.558847" elapsed="1.611245"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:03.556850" elapsed="1.614241"/>
+</test>
+<kw name="Close my browser" owner="Login_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-10-19T22:44:05.172090" elapsed="9.817351"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:05.172090" elapsed="9.817351"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:43:32.119324" elapsed="42.870117"/>
+</suite>
+<status status="PASS" start="2024-10-19T22:43:32.040370" elapsed="42.951069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Invalid Login test">Suites.Invalid Login test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-19T22:43:32.907873" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Login_resources.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:44:02.329022" level="WARN">Multiple tests with name 'Login with csv' executed in suite 'Suites.Invalid Login test'.</msg>
+<msg time="2024-10-19T22:44:03.555849" level="WARN">Multiple tests with name 'Login with csv' executed in suite 'Suites.Invalid Login test'.</msg>
+</errors>
+</robot>

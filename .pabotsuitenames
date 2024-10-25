@@ -1,0 +1,9 @@
+datasources:7312da4ba22c1da0843e0fd621e6cf8e6989e2db
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:e20204c8082e6a948843290f6983a1ed9ed6c82a
+--suite Suites.Forget password test
+--suite Suites.Invalid Login test
+--suite Suites.Invalid Register test
+--suite Suites.Valid Login test
+--suite Suites.Valid Register test

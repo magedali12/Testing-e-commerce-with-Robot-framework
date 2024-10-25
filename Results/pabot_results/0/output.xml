@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-19T22:43:31.944425" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Forget password test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\Forget_password_test.robot">
+<kw name="Open my browser" owner="Forget_Password" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:43:32.782945" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T22:43:32.781945" elapsed="37.629913"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.412857" elapsed="0.074957"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-19T22:43:32.778947" elapsed="37.708867"/>
+</kw>
+<test id="s1-s1-t1" name="Forget Test" line="13">
+<kw name="Open forgetPassword page" owner="Forget_Password">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:10.493812" level="INFO">Clicking link 'link:Forgot password?'.</msg>
+<arg>${forget_password_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:10.492813" elapsed="0.987457"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:10.491814" elapsed="0.988456"/>
+</kw>
+<kw name="Enter email" owner="Forget_Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.485268" level="INFO">Typing text 'migzz1@test.com' into text field 'id:Email'.</msg>
+<arg>${forget_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.484269" elapsed="0.174899"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:11.481269" elapsed="0.177899"/>
+</kw>
+<kw name="Click on recover" owner="Forget_Password">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:11.662167" level="INFO">Clicking element 'xpath://input[@value='Recover']'.</msg>
+<arg>${forget_recover_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:11.661168" elapsed="0.409814"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:11.660168" elapsed="0.411812"/>
+</kw>
+<kw name="Verify email has been sent" owner="Forget_Password">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:12.182916" level="INFO">Current page contains text 'Email with instructions has been sent to you.'.</msg>
+<arg>Email with instructions has been sent to you.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.073979" elapsed="0.108937"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:12.071980" elapsed="0.111936"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:10.489815" elapsed="1.695101"/>
+</test>
+<kw name="Close my browser" owner="Forget_Password" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-10-19T22:44:12.187915" elapsed="10.677632"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:12.186915" elapsed="10.679634"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:43:32.033374" elapsed="50.834174"/>
+</suite>
+<status status="PASS" start="2024-10-19T22:43:31.975407" elapsed="50.898142"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Forget password test">Suites.Forget password test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,3 @@
+[ WARN ] Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Login_resources.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Multiple tests with name 'Login with csv' executed in suite 'Suites.Invalid Login test'.
+[ WARN ] Multiple tests with name 'Login with csv' executed in suite 'Suites.Invalid Login test'.

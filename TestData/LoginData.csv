@@ -1,0 +1,4 @@
+${email};${password};${error_msg};${error_in};
+;;Login was unsuccessful. Please correct the errors and try again.;
+migzz10@test.com;123456;Login was unsuccessful. Please correct the errors and try again.;No customer account found;
+migzz12@test.com;123456789;Login was unsuccessful. Please correct the errors and try again.;The credentials provided are incorrect;

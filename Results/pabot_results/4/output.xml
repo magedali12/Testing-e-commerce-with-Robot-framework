@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-19T22:43:32.323207" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Valid Register test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\Valid_Register_test.robot">
+<kw name="Open my browser" owner="Register_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:43:33.450563" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T22:43:33.449563" elapsed="40.174828"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.625392" elapsed="0.219874"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-19T22:43:33.446565" elapsed="40.399700"/>
+</kw>
+<test id="s1-s1-t1" name="Valid Register" line="18">
+<kw name="Open register page from register button" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:13.852261" level="INFO">Clicking element 'xpath://input[@value='Register']'.</msg>
+<arg>${reg_btn_from_loginPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:13.850265" elapsed="1.239141"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:13.848264" elapsed="1.242141"/>
+</kw>
+<kw name="Select gender" owner="Register_resources">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.092404" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<arg>${reg_gender}</arg>
+<arg>${gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.091405" elapsed="0.121932"/>
+</kw>
+<arg>${gender}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.090405" elapsed="0.122932"/>
+</kw>
+<kw name="Enter firstname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.218332" level="INFO">Typing text 'maged' into text field 'id:FirstName'.</msg>
+<arg>${reg_firstname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.216334" elapsed="0.203883"/>
+</kw>
+<arg>${firstname}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.214336" elapsed="0.206880"/>
+</kw>
+<kw name="Enter lastname" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.423214" level="INFO">Typing text 'ali' into text field 'id:LastName'.</msg>
+<arg>${reg_lastname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.423214" elapsed="0.196888"/>
+</kw>
+<arg>${lastname}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.421216" elapsed="0.199886"/>
+</kw>
+<kw name="Enter email" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.623101" level="INFO">Typing text 'migzz15@test.com' into text field 'id:Email'.</msg>
+<arg>${reg_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.622102" elapsed="0.218874"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.621102" elapsed="0.220872"/>
+</kw>
+<kw name="Enter password" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:15.844974" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${reg_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:15.843975" elapsed="0.169902"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:15.841974" elapsed="0.172902"/>
+</kw>
+<kw name="Enter confirmpassword" owner="Register_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.019874" level="INFO">Typing text '123456' into text field 'id:ConfirmPassword'.</msg>
+<arg>${reg_confirmPassword}</arg>
+<arg>${confirmpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.017876" elapsed="0.168902"/>
+</kw>
+<arg>${confirmPassword}</arg>
+<status status="PASS" start="2024-10-19T22:44:16.014876" elapsed="0.172902"/>
+</kw>
+<kw name="Click register btn" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:16.190776" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${reg_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:16.189777" elapsed="1.651198"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:16.188777" elapsed="1.653197"/>
+</kw>
+<kw name="Verify valid register" owner="Register_resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:17.868962" level="INFO">Current page contains text 'Your registration completed'.</msg>
+<arg>Your registration completed</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-19T22:44:17.843974" elapsed="0.026001"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:17.842975" elapsed="0.027000"/>
+</kw>
+<kw name="Click on continue" owner="Register_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:17.870978" level="INFO">Clicking element 'xpath://input[@value='Continue']'.</msg>
+<arg>${reg_Continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:17.870978" elapsed="3.198928"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:17.869975" elapsed="3.199931"/>
+</kw>
+<kw name="Verify go to home page" owner="Register_resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:21.096888" level="INFO">Current page contains text 'Welcome to our store'.</msg>
+<arg>Welcome to our store</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-19T22:44:21.071903" elapsed="0.024985"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:21.070903" elapsed="0.026985"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:13.846265" elapsed="7.251623"/>
+</test>
+<kw name="Close my browser" owner="Register_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-10-19T22:44:21.100887" elapsed="7.864808"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:21.099886" elapsed="7.866835"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:43:32.415155" elapsed="56.551566"/>
+</suite>
+<status status="PASS" start="2024-10-19T22:43:32.355189" elapsed="56.616529"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Valid Register test">Suites.Valid Register test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-19T22:43:33.434571" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 66: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.435572" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.435572" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 74: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.436570" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 78: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.437570" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-19T22:43:33.437570" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Register_resources.robot' on line 87: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

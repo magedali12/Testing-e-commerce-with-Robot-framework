@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-19T22:43:32.050364" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Valid Login test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\Valid_Login_test.robot">
+<kw name="Open my browser" owner="Login_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:43:32.868897" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T22:43:32.867896" elapsed="24.252195"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T22:43:57.121091" elapsed="6.187850"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-19T22:43:32.862899" elapsed="30.446042"/>
+</kw>
+<test id="s1-s1-t1" name="Valid login" line="14">
+<kw name="Enter email" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.366959" level="INFO">Typing text 'migzz1@test.com' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.363959" elapsed="0.160907"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-19T22:44:03.362959" elapsed="0.161907"/>
+</kw>
+<kw name="Enter password" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.526867" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.525868" elapsed="0.156909"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-19T22:44:03.524866" elapsed="0.157911"/>
+</kw>
+<kw name="Click login btn" owner="Login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:03.686776" level="INFO">Clicking element 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T22:44:03.685776" elapsed="5.556635"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:03.683776" elapsed="5.558635"/>
+</kw>
+<kw name="Verify successful login" owner="Login_resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-19T22:44:09.301376" level="INFO">Current page contains text 'Welcome to our store'.</msg>
+<arg>Welcome to our store</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-19T22:44:09.243409" elapsed="0.057967"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:09.242411" elapsed="0.059968"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:03.308941" elapsed="5.994437"/>
+</test>
+<kw name="Close my browser" owner="Login_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-10-19T22:44:09.307374" elapsed="12.708284"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:44:09.306373" elapsed="12.710256"/>
+</kw>
+<status status="PASS" start="2024-10-19T22:43:32.163299" elapsed="49.853330"/>
+</suite>
+<status status="PASS" start="2024-10-19T22:43:32.105332" elapsed="49.917320"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Valid Login test">Suites.Valid Login test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-19T22:43:32.170296" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Login_resources.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
