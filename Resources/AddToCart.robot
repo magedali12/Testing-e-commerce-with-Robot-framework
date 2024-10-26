@@ -22,6 +22,15 @@ Customice The Product
     Click Element    ${Build_your_own_computer_customice_add_btn}
     Sleep    2
 
+
+Remove the products from the cart
+    Wait Until Page Contains Element    ${remove_checkbox_first_product}
+    Select Checkbox    ${remove_checkbox_first_product}
+    Select Checkbox    ${remove_checkbox_second_product}
+    Click Element    ${update_cart_btn}
+    Sleep    3
+
+
 Go to the cart
     Click Link    Shopping cart
     Sleep    5
@@ -33,6 +42,15 @@ Go to home page
 
 Verify product has been added to cart
     Page Should Contain    The product has been added to your
+    
+Verify the cart is empty
+    Page Should Contain    Your Shopping Cart is empty!
+
+Verify the cart counter has been decreased by one
+    Page Should Contain    (1)
+
+Verify the cart counter has been decreased by two
+    Page Should Contain    (0)
 
 Verify the cart counter has been increased by one
     Page Should Contain    (1)

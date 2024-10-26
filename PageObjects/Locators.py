@@ -38,12 +38,17 @@ search_sortby_dropdown = "products-orderby"
 search_viewmode_dropdown = "products-viewmode"
 
 
-#add to cart elements
+#the cart elements
 inch_product_add_btn = "xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[3]/div/div[2]/div[3]/div[2]/input"
 Build_your_own_computer_product_add_btn = "xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input"
 select_hdd_radio_btn = "xpath://input[@id='product_attribute_16_3_6_19']"
 Build_your_own_computer_customice_add_btn = "xpath://input[@data-productid='16']"
 go_to_home_page = "xpath:/html/body/div[4]/div[1]/div[1]/div[1]/a/img"
+remove_checkbox_first_product = "xpath:/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/table/tbody/tr[1]/td[1]/input"
+remove_checkbox_second_product = "xpath:/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/table/tbody/tr[2]/td[1]/input"
+update_cart_btn = "xpath://input[@value='Update shopping cart']"
+continue_shopping_btn = "xpath://input[@value='Continue shopping']"
+
 
 
 

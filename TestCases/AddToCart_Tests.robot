@@ -20,3 +20,11 @@ Add second product to the cart
     Verify product has been added to cart
     Verify the cart counter has been increased by two
     Go to the cart
+
+Remove products from the cart
+    Remove the products from the cart
+    Verify the cart counter has been decreased by two
+    Verify the cart is empty
+
+
+
