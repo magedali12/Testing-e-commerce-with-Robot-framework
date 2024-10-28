@@ -39,6 +39,8 @@ search_viewmode_dropdown = "products-viewmode"
 
 
 #the cart elements
+inch_link = "link:14.1-inch Laptop"
+inch_add = "xpath://input[@id='add-to-cart-button-31']"
 inch_product_add_btn = "xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[3]/div/div[2]/div[3]/div[2]/input"
 Build_your_own_computer_product_add_btn = "xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input"
 select_hdd_radio_btn = "xpath://input[@id='product_attribute_16_3_6_19']"
@@ -48,6 +50,29 @@ remove_checkbox_first_product = "xpath:/html/body/div[4]/div[1]/div[4]/div/div/d
 remove_checkbox_second_product = "xpath:/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/table/tbody/tr[2]/td[1]/input"
 update_cart_btn = "xpath://input[@value='Update shopping cart']"
 continue_shopping_btn = "xpath://input[@value='Continue shopping']"
+
+
+#e2e elements
+the_terms_of_service_checkbox = "xpath://input[@id='termsofservice']"
+checkout_btn = "xpath://button[@id='checkout']"
+billing_country_dropdown = "BillingNewAddress.CountryId"
+billing_city = "id:BillingNewAddress_City"
+billing_address1 = "id:BillingNewAddress_Address1"
+billing_postalcode = "id:BillingNewAddress_ZipPostalCode"
+billing_phonenumber = "id:BillingNewAddress_PhoneNumber"
+billing_continue1 = "xpath://input[@onclick='Billing.save()']"
+shipping_instore = "id:PickUpInStore"
+shipping_continue2 = "xpath://input[@onclick='Shipping.save()']"
+payment_method = "paymentmethod"
+payment_continue3 = "xpath://input[@onclick='PaymentMethod.save()']"
+paymentinfo_continue4 = "xpath://input[@onclick='PaymentInfo.save()']"
+confirm_order_btn = "xpath://input[@onclick='ConfirmOrder.save()']"
+continue_to_homapage = "xpath://input[@value='Continue']"
+
+
+
+
+
 
 
 

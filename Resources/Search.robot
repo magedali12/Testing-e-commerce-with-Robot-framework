@@ -9,6 +9,7 @@ Open my browser
     Maximize Browser Window
 
 Click on search field
+    Wait Until Page Contains Element    ${search_input}
     Click Element    ${search_input}
 
 Enter the search data
@@ -49,6 +50,18 @@ Verify list mode is displayed
 
 Verify error msg is displayed
     Page Should Contain    No products were found that matched your criteria.
+
+
+Search Product
+    [Arguments]     ${search_data}
+    Click on search field
+    Enter the search data    ${search_data}
+    Click on button search
+    Verify product visibility    ${search_data}
+
+Select Product
+    Wait Until Page Contains Element    ${inch_link}
+    Click Link    ${inch_link}
 
 
 Close my browser

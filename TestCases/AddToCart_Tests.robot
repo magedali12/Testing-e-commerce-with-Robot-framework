@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource    ../Resources/AddToCart.robot
+Resource    ../Resources/AddToCartAndCheckout.robot
 Suite Setup  Open my browser
 Suite Teardown  Close my browser
 

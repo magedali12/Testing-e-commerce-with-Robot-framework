@@ -29,10 +29,19 @@ Get invalid login msg
 
 
 Verify successful login
+    Wait Until Page Contains    Welcome to our store
     Page Should Contain    Welcome to our store
 
 Verify unsccessful login
     Page Should Not Contain    Welcome to our store
+
+Valid_Login
+    [Arguments]     ${email}    ${password}
+    Enter email    ${email}
+    Enter password    ${password}
+    Click login btn
+    Verify successful login
+
 
 Close my browser
     Close All Browsers

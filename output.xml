@@ -1,236 +1,450 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-26T17:41:09.483065" rpa="false" schemaversion="5">
-<suite id="s1" name="AddToCart Tests" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\TestCases\AddToCart_Tests.robot">
-<kw name="Open my browser" owner="AddToCart" type="SETUP">
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-10-28T03:05:09.817724" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E Test" source="C:\Users\Migzz\PycharmProjects\Automation_Task1\E2E\e2e_test\E2E_Test.robot">
+<kw name="Open my browser E" owner="E2E" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:10.144691" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
-<arg>https://demowebshop.tricentis.com/</arg>
-<arg>chrome</arg>
+<msg time="2024-10-28T03:05:10.200505" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-26T17:41:10.143689" elapsed="12.741777"/>
+<status status="PASS" start="2024-10-28T03:05:10.200505" elapsed="7.357814"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-26T17:41:22.885466" elapsed="0.065962"/>
+<status status="PASS" start="2024-10-28T03:05:17.559335" elapsed="0.051952"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:10.141690" elapsed="12.809738"/>
+<status status="PASS" start="2024-10-28T03:05:10.199506" elapsed="7.413775"/>
 </kw>
-<test id="s1-t1" name="Add first product to the cart" line="9">
-<kw name="Click Add To The Cart First Product" owner="AddToCart">
+<test id="s1-t1" name="E2E Test - Purchase Flow" line="10">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-10-28T03:05:17.616278" elapsed="0.001000"/>
+</kw>
+<kw name="Proceed To Checkout" owner="E2E">
+<kw name="Login As Registered User" owner="E2E">
+<kw name="Valid_Login" owner="Login_resources">
+<kw name="Enter email" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:17.623275" level="INFO">Typing text 'migzz15@test.com' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:17.622279" elapsed="3.275072"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-28T03:05:17.621277" elapsed="3.278006"/>
+</kw>
+<kw name="Enter password" owner="Login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:20.905278" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:20.903279" elapsed="3.287992"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-28T03:05:20.900280" elapsed="3.290991"/>
+</kw>
+<kw name="Click login btn" owner="Login_resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:22.954427" level="INFO">Clicking element 'xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[3]/div/div[2]/div[3]/div[2]/input'.</msg>
-<arg>${inch_product_add_btn}</arg>
+<msg time="2024-10-28T03:05:24.193272" level="INFO">Clicking element 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:22.954427" elapsed="0.139922"/>
+<status status="PASS" start="2024-10-28T03:05:24.192272" elapsed="7.223056"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:25.098433" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:23.094349" elapsed="2.004084"/>
+<status status="PASS" start="2024-10-28T03:05:24.192272" elapsed="7.223056"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:22.953428" elapsed="2.145005"/>
+<kw name="Verify successful login" owner="Login_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to our store</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:05:31.416295" elapsed="1.018024"/>
 </kw>
-<kw name="Verify product has been added to cart" owner="AddToCart">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:25.120419" level="INFO">Current page contains text 'The product has been added to your'.</msg>
+<msg time="2024-10-28T03:05:34.472917" level="INFO">Current page contains text 'Welcome to our store'.</msg>
+<arg>Welcome to our store</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-28T03:05:32.434319" elapsed="2.038598"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:31.415328" elapsed="3.057589"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-28T03:05:17.620277" elapsed="16.852640"/>
+</kw>
+<doc>Login as an existing user using the LoginPage keywords.</doc>
+<status status="PASS" start="2024-10-28T03:05:17.619278" elapsed="16.853639"/>
+</kw>
+<kw name="Search And Select Product" owner="E2E">
+<kw name="Search Product" owner="Search">
+<kw name="Click on search field" owner="Search">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${search_input}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:05:34.474918" elapsed="1.017035"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:35.492936" level="INFO">Clicking element 'xpath://input[@value='Search store']'.</msg>
+<arg>${search_input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:35.491953" elapsed="2.098776"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:34.474918" elapsed="3.115811"/>
+</kw>
+<kw name="Enter the search data" owner="Search">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:37.591697" level="INFO">Typing text '14.1-inch Laptop' into text field 'xpath://input[@value='Search store']'.</msg>
+<arg>${search_input}</arg>
+<arg>${search_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:37.591697" elapsed="3.129837"/>
+</kw>
+<arg>${search_data}</arg>
+<status status="PASS" start="2024-10-28T03:05:37.590729" elapsed="3.130805"/>
+</kw>
+<kw name="Click on button search" owner="Search">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:40.723515" level="INFO">Clicking element 'xpath://input[@value='Search']'.</msg>
+<arg>${search_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:40.723515" elapsed="2.977163"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:40.722515" elapsed="2.978163"/>
+</kw>
+<kw name="Verify product visibility" owner="Search">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:45.753442" level="INFO">Current page contains text '14.1-inch Laptop'.</msg>
+<arg>${search_data}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-28T03:05:43.702636" elapsed="2.050806"/>
+</kw>
+<arg>${search_data}</arg>
+<status status="PASS" start="2024-10-28T03:05:43.701637" elapsed="2.051805"/>
+</kw>
+<arg>${Product_name}</arg>
+<status status="PASS" start="2024-10-28T03:05:34.473916" elapsed="11.279526"/>
+</kw>
+<kw name="Select Product" owner="Search">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${inch_link}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:05:45.755383" elapsed="1.062480"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:46.820863" level="INFO">Clicking link 'link:14.1-inch Laptop'.</msg>
+<arg>${inch_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:46.818859" elapsed="3.733113"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:45.754384" elapsed="4.798559"/>
+</kw>
+<doc>Search for a product and select it.</doc>
+<status status="PASS" start="2024-10-28T03:05:34.473916" elapsed="16.079027"/>
+</kw>
+<kw name="Add Product To Cart And Go To Cart" owner="E2E">
+<kw name="Add Product To Cart" owner="AddToCartAndCheckout">
+<kw name="Click Add To Cart" owner="AddToCartAndCheckout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:50.558938" level="INFO">Clicking element 'xpath://input[@id='add-to-cart-button-31']'.</msg>
+<arg>${inch_add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:05:50.557939" elapsed="2.185994"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:50.556939" elapsed="2.186994"/>
+</kw>
+<kw name="Verify product has been added to cart" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The product has been added to your</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:05:52.744935" elapsed="1.019737"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:05:55.805467" level="INFO">Current page contains text 'The product has been added to your'.</msg>
 <arg>The product has been added to your</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:25.100432" elapsed="0.019987"/>
+<status status="PASS" start="2024-10-28T03:05:53.765673" elapsed="2.039794"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:25.099432" elapsed="0.020987"/>
+<status status="PASS" start="2024-10-28T03:05:52.743933" elapsed="3.061534"/>
 </kw>
-<kw name="Verify the cart counter has been increased by one" owner="AddToCart">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:25.138409" level="INFO">Current page contains text '(1)'.</msg>
-<arg>(1)</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:25.121418" elapsed="0.017990"/>
-</kw>
-<status status="PASS" start="2024-10-26T17:41:25.121418" elapsed="0.017990"/>
-</kw>
-<kw name="Go to the cart" owner="AddToCart">
+<kw name="Go to the cart" owner="AddToCartAndCheckout">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:25.140407" level="INFO">Clicking link 'Shopping cart'.</msg>
+<msg time="2024-10-28T03:05:55.807406" level="INFO">Clicking link 'Shopping cart'.</msg>
 <arg>Shopping cart</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:25.140407" elapsed="0.703342"/>
+<status status="PASS" start="2024-10-28T03:05:55.807406" elapsed="3.717043"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:30.844876" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:25.843749" elapsed="5.002127"/>
-</kw>
-<status status="PASS" start="2024-10-26T17:41:25.139408" elapsed="5.706468"/>
-</kw>
-<kw name="Go to home page" owner="AddToCart">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:30.851873" level="INFO">Clicking element 'xpath:/html/body/div[4]/div[1]/div[1]/div[1]/a/img'.</msg>
-<arg>${go_to_home_page}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:30.851873" elapsed="0.747883"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:34.639416" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-10-28T03:06:02.535020" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:31.600754" elapsed="3.038662"/>
+<status status="PASS" start="2024-10-28T03:05:59.524449" elapsed="3.010571"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:30.850874" elapsed="3.789542"/>
+<status status="PASS" start="2024-10-28T03:05:55.806407" elapsed="6.728613"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:22.951428" elapsed="11.732963"/>
-</test>
-<test id="s1-t2" name="Add second product to the cart" line="17">
-<kw name="Click Add To The Cart Second Product" owner="AddToCart">
+<status status="PASS" start="2024-10-28T03:05:50.554940" elapsed="11.980080"/>
+</kw>
+<doc>Add a product to the cart.</doc>
+<status status="PASS" start="2024-10-28T03:05:50.553941" elapsed="11.981079"/>
+</kw>
+<kw name="Checkout" owner="E2E">
+<kw name="Checkout And Enter Details" owner="AddToCartAndCheckout">
+<kw name="Click on termsofservice" owner="AddToCartAndCheckout">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:02.537993" level="INFO">Selecting checkbox 'xpath://input[@id='termsofservice']'.</msg>
+<arg>${the_terms_of_service_checkbox}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:02.537004" elapsed="5.263935"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:02.537004" elapsed="5.264879"/>
+</kw>
+<kw name="Click on checkout" owner="AddToCartAndCheckout">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:34.702379" level="INFO">Clicking element 'xpath:/html/body/div[4]/div[1]/div[4]/div[3]/div/div/div[3]/div[5]/div/div[2]/div[3]/div[2]/input'.</msg>
-<arg>${Build_your_own_computer_product_add_btn}</arg>
+<msg time="2024-10-28T03:06:07.805903" level="INFO">Clicking element 'xpath://button[@id='checkout']'.</msg>
+<arg>${checkout_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:34.701380" elapsed="0.109938"/>
+<status status="PASS" start="2024-10-28T03:06:07.804868" elapsed="3.216333"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:36.825405" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:34.811318" elapsed="2.014087"/>
+<status status="PASS" start="2024-10-28T03:06:07.802905" elapsed="3.219258"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:34.700381" elapsed="2.125024"/>
-</kw>
-<kw name="Customice The Product" owner="AddToCart">
+<kw name="Click on new address" owner="AddToCartAndCheckout">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${Build_your_own_computer_customice_add_btn}</arg>
+<arg>billing_address_id</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-10-26T17:41:36.827387" elapsed="2.842657"/>
+<status status="PASS" start="2024-10-28T03:06:11.024158" elapsed="1.051760"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:12.076852" level="INFO">Selecting options from selection list 'billing_address_id' by label New Address.</msg>
+<arg>billing_address_id</arg>
+<arg>New Address</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-10-28T03:06:12.076852" elapsed="7.285124"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:11.023158" elapsed="8.338818"/>
+</kw>
+<kw name="Select country" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${billing_country_dropdown}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:06:19.362931" elapsed="1.044560"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:20.409454" level="INFO">Selecting options from selection list 'BillingNewAddress.CountryId' by label Egypt.</msg>
+<arg>${billing_country_dropdown}</arg>
+<arg>Egypt</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-10-28T03:06:20.408456" elapsed="7.279844"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:19.361976" elapsed="8.327292"/>
+</kw>
+<kw name="Enter city" owner="AddToCartAndCheckout">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:27.693263" level="INFO">Typing text 'cairo' into text field 'id:BillingNewAddress_City'.</msg>
+<arg>${billing_city}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:27.692264" elapsed="3.298502"/>
+</kw>
+<arg>${city}</arg>
+<status status="PASS" start="2024-10-28T03:06:27.690267" elapsed="3.301492"/>
+</kw>
+<kw name="Enter address" owner="AddToCartAndCheckout">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:30.995756" level="INFO">Typing text 'giza' into text field 'id:BillingNewAddress_Address1'.</msg>
+<arg>${billing_address1}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:30.994729" elapsed="3.293320"/>
+</kw>
+<arg>${address}</arg>
+<status status="PASS" start="2024-10-28T03:06:30.992722" elapsed="3.295327"/>
+</kw>
+<kw name="Enter postal code" owner="AddToCartAndCheckout">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:34.288992" level="INFO">Typing text '12358' into text field 'id:BillingNewAddress_ZipPostalCode'.</msg>
+<arg>${billing_postalcode}</arg>
+<arg>${postal_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:34.288992" elapsed="3.269522"/>
+</kw>
+<arg>${postal_code}</arg>
+<status status="PASS" start="2024-10-28T03:06:34.288049" elapsed="3.271463"/>
+</kw>
+<kw name="Enter phone number" owner="AddToCartAndCheckout">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:37.563515" level="INFO">Typing text '0112457856' into text field 'id:BillingNewAddress_PhoneNumber'.</msg>
+<arg>${billing_phonenumber}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:37.562519" elapsed="3.296204"/>
+</kw>
+<arg>${phone}</arg>
+<status status="PASS" start="2024-10-28T03:06:37.560519" elapsed="3.299139"/>
+</kw>
+<kw name="Click on continue1" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${billing_continue1}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:06:40.861654" elapsed="1.045017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:41.908605" level="INFO">Clicking element 'xpath://input[@onclick='Billing.save()']'.</msg>
+<arg>${billing_continue1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:41.907609" elapsed="2.162224"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:40.860656" elapsed="3.210122"/>
+</kw>
+<kw name="click on in store checkbox" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${shipping_instore}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:06:44.072773" elapsed="1.042738"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:45.118451" level="INFO">Selecting checkbox 'id:PickUpInStore'.</msg>
+<arg>${shipping_instore}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:45.117448" elapsed="5.155049"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:44.071774" elapsed="6.201724"/>
+</kw>
+<kw name="Click on continue shipping_save" owner="AddToCartAndCheckout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:06:50.279495" level="INFO">Clicking element 'xpath://input[@onclick='Shipping.save()']'.</msg>
+<arg>${shipping_continue2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:06:50.277496" elapsed="2.116072"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:06:50.275496" elapsed="2.118072"/>
+</kw>
+<kw name="Select payment method" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${payment_method}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:06:52.395569" elapsed="1.042844"/>
 </kw>
 <kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:39.671040" level="INFO">Selecting '19' from radio button 'product_attribute_16_3_6'.</msg>
-<arg>product_attribute_16_3_6</arg>
-<arg>19</arg>
+<msg time="2024-10-28T03:06:53.440349" level="INFO">Selecting 'Payments.CashOnDelivery' from radio button 'paymentmethod'.</msg>
+<arg>${payment_method}</arg>
+<arg>${method}</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2024-10-26T17:41:39.670044" elapsed="0.100939"/>
+<status status="PASS" start="2024-10-28T03:06:53.439352" elapsed="2.076150"/>
 </kw>
+<arg>${Payment_Method}</arg>
+<status status="PASS" start="2024-10-28T03:06:52.394566" elapsed="3.121903"/>
+</kw>
+<kw name="Click on continue payment_save" owner="AddToCartAndCheckout">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:39.771983" level="INFO">Clicking element 'xpath://input[@data-productid='16']'.</msg>
-<arg>${Build_your_own_computer_customice_add_btn}</arg>
+<msg time="2024-10-28T03:06:55.519465" level="INFO">Clicking element 'xpath://input[@onclick='PaymentMethod.save()']'.</msg>
+<arg>${payment_continue3}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:39.770983" elapsed="0.071957"/>
+<status status="PASS" start="2024-10-28T03:06:55.518465" elapsed="2.213475"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:41.845113" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:39.842940" elapsed="2.002173"/>
+<status status="PASS" start="2024-10-28T03:06:55.516469" elapsed="2.216441"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:36.826386" elapsed="5.018727"/>
+<kw name="Verify payment method cash on delivery" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You will pay by COD</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:06:57.734908" elapsed="1.044146"/>
 </kw>
-<kw name="Verify product has been added to cart" owner="AddToCart">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:41.861047" level="INFO">Current page contains text 'The product has been added to your'.</msg>
-<arg>The product has been added to your</arg>
+<msg time="2024-10-28T03:07:00.840458" level="INFO">Current page contains text 'You will pay by COD'.</msg>
+<arg>You will pay by COD</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:41.847057" elapsed="0.013990"/>
+<status status="PASS" start="2024-10-28T03:06:58.779987" elapsed="2.060471"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:41.846059" elapsed="0.014988"/>
+<status status="PASS" start="2024-10-28T03:06:57.733908" elapsed="3.107516"/>
 </kw>
-<kw name="Verify the cart counter has been increased by two" owner="AddToCart">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:41.881037" level="INFO">Current page contains text '(2)'.</msg>
-<arg>(2)</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:41.862049" elapsed="0.018988"/>
+<kw name="Click on continue payment_info_save" owner="AddToCartAndCheckout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:07:00.844421" level="INFO">Clicking element 'xpath://input[@onclick='PaymentInfo.save()']'.</msg>
+<arg>${paymentinfo_continue4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:07:00.843422" elapsed="2.147710"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:41.862049" elapsed="0.018988"/>
+<status status="PASS" start="2024-10-28T03:07:00.842422" elapsed="2.149674"/>
 </kw>
-<kw name="Go to the cart" owner="AddToCart">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:41.883035" level="INFO">Clicking link 'Shopping cart'.</msg>
-<arg>Shopping cart</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:41.882041" elapsed="0.768024"/>
+<arg>${city}</arg>
+<arg>${address}</arg>
+<arg>${postal_code}</arg>
+<arg>${phone}</arg>
+<arg>${payment1}</arg>
+<status status="PASS" start="2024-10-28T03:06:02.535990" elapsed="60.456106"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:47.660917" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:42.650065" elapsed="5.010852"/>
+<doc>proceed to checkout.</doc>
+<status status="PASS" start="2024-10-28T03:06:02.535990" elapsed="60.457110"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:41.882041" elapsed="5.778876"/>
-</kw>
-<status status="PASS" start="2024-10-26T17:41:34.696383" elapsed="12.965483"/>
-</test>
-<test id="s1-t3" name="Remove products from the cart" line="24">
-<kw name="Remove the products from the cart" owner="AddToCart">
+<kw name="Place Order" owner="E2E">
+<kw name="Confirm Order And Make Sure It's Successful" owner="AddToCartAndCheckout">
+<kw name="Click on confirm order" owner="AddToCartAndCheckout">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${remove_checkbox_first_product}</arg>
+<arg>${confirm_order_btn}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-10-26T17:41:47.665861" elapsed="0.023002"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:47.689863" level="INFO">Selecting checkbox 'xpath:/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/table/tbody/tr[1]/td[1]/input'.</msg>
-<arg>${remove_checkbox_first_product}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:47.688863" elapsed="0.503253"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:48.194116" level="INFO">Selecting checkbox 'xpath:/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/form/table/tbody/tr[2]/td[1]/input'.</msg>
-<arg>${remove_checkbox_second_product}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:48.193115" elapsed="0.088950"/>
+<status status="PASS" start="2024-10-28T03:07:03.000091" elapsed="1.047298"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:48.283065" level="INFO">Clicking element 'xpath://input[@value='Update shopping cart']'.</msg>
-<arg>${update_cart_btn}</arg>
+<msg time="2024-10-28T03:07:04.049353" level="INFO">Clicking element 'xpath://input[@onclick='ConfirmOrder.save()']'.</msg>
+<arg>${confirm_order_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-26T17:41:48.283065" elapsed="1.967132"/>
+<status status="PASS" start="2024-10-28T03:07:04.048324" elapsed="2.189098"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-26T17:41:53.252659" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-26T17:41:50.250197" elapsed="3.002462"/>
+<status status="PASS" start="2024-10-28T03:07:02.998130" elapsed="3.239292"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:47.665861" elapsed="5.586798"/>
+<kw name="Verify Order is Successfully Processed" owner="AddToCartAndCheckout">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your order has been successfully processed!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-28T03:07:06.238411" elapsed="1.020700"/>
 </kw>
-<kw name="Verify the cart counter has been decreased by two" owner="AddToCart">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:53.274653" level="INFO">Current page contains text '(0)'.</msg>
-<arg>(0)</arg>
+<msg time="2024-10-28T03:07:09.317898" level="INFO">Current page contains text 'Your order has been successfully processed!'.</msg>
+<arg>Your order has been successfully processed!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:53.254663" elapsed="0.019990"/>
+<status status="PASS" start="2024-10-28T03:07:07.260054" elapsed="2.057844"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:53.253642" elapsed="0.021011"/>
+<status status="PASS" start="2024-10-28T03:07:06.237422" elapsed="3.081442"/>
 </kw>
-<kw name="Verify the cart is empty" owner="AddToCart">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-26T17:41:53.294618" level="INFO">Current page contains text 'Your Shopping Cart is empty!'.</msg>
-<arg>Your Shopping Cart is empty!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-26T17:41:53.276629" elapsed="0.017989"/>
+<kw name="Click continue to go to home page" owner="AddToCartAndCheckout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-28T03:07:09.322862" level="INFO">Clicking element 'xpath://input[@value='Continue']'.</msg>
+<arg>${continue_to_homapage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-28T03:07:09.320863" elapsed="2.576840"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:53.275630" elapsed="0.018988"/>
+<status status="PASS" start="2024-10-28T03:07:09.319864" elapsed="2.578772"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:47.663859" elapsed="5.631763"/>
+<status status="PASS" start="2024-10-28T03:07:02.996101" elapsed="8.903534"/>
+</kw>
+<doc>Complete the order.</doc>
+<status status="PASS" start="2024-10-28T03:07:02.994130" elapsed="8.905505"/>
+</kw>
+<status status="PASS" start="2024-10-28T03:05:17.618278" elapsed="114.283357"/>
+</kw>
+<doc>Complete E2E Test - Login, Search, Add to Cart, Checkout, and Verify Order</doc>
+<status status="PASS" start="2024-10-28T03:05:17.614281" elapsed="114.290353"/>
 </test>
-<kw name="Close my browser" owner="AddToCart" type="TEARDOWN">
+<kw name="Close my browser E" owner="E2E" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-10-26T17:41:53.298617" elapsed="7.306686"/>
+<status status="PASS" start="2024-10-28T03:07:11.912663" elapsed="3.187294"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:53.298617" elapsed="7.307687"/>
+<status status="PASS" start="2024-10-28T03:07:11.910665" elapsed="3.189292"/>
 </kw>
-<status status="PASS" start="2024-10-26T17:41:09.486062" elapsed="51.121241"/>
+<status status="PASS" start="2024-10-28T03:05:09.820723" elapsed="125.280234"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="AddToCart Tests">AddToCart Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="E2E Test">E2E Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-10-28T03:05:10.186513" level="WARN">Error in file 'C:\Users\Migzz\PycharmProjects\Automation_Task1\Resources\Login_resources.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
